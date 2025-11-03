@@ -30,6 +30,4 @@ results are in result directory
 
 ## contact
 
-If you have any troubles, please feel free to open an issue.
-Tetsuro Kawano-Sugaya (sugaya@tetsu.ro)
-https://tetsu.ro
+If you have any troubles, please feel free to open an issue. Tetsuro Kawano-Sugaya (github@seikai.org) https://tetsu.ro
