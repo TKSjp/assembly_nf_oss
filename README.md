@@ -1,6 +1,6 @@
-# assembly_nf
+# assembly_nf_oss
 
-Nextflow assembly pipelines for Entamoeba.
+Nextflow assembly pipelines for Entamoeba genome using PacBio HiFi reads.
 
 ## environment
 
