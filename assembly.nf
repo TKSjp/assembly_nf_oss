@@ -132,12 +132,8 @@ process samtools_sort {
 }
 
 workflow {
-    fastq_files = channel.fromFilePairs('input/Eh-2001-3.fastq.gz', size: 1)
-    // fasta_file = file('input/AS16IRpacf.fna')
-
+    fastq_files = channel.fromFilePairs('input/*.fastq.gz', size: 1)
     trimmed_fastq_files = trim_hifi_reads(fastq_files)
-    // minimap2_filtered = minimap2_filter(trimmed_fastq_files.trimmed_fastq, fasta_file)
-    // samtools_splitted = samtools_split(minimap2_filtered.sam)
     hifiasm_assembled = hifiasm(trimmed_fastq_files.trimmed_fastq)
     quast_analysed = quast(hifiasm_assembled.fna)
     minimap2_remapped = minimap2_remap(trimmed_fastq_files.trimmed_fastq, hifiasm_assembled.fna)
